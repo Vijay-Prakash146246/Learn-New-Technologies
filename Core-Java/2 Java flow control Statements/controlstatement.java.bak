@@ -1,23 +1,22 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
 class Test 
 {
 	public static void main(String[] args) 
 	{
-		int a=20;
-if (a==10)
-{ System.out.println("ten");
-}
-else if (a==20)
-{ System.out.println("twenty");
-}
-else if (a==30)
-{ System.out.println("thirty");
-}
-else
-{ System.out.println("default condition");
-}
+		if (true)
+		{ 
+				System.out.println("ratan");
+				break;
+				System.out.println("nandu");
+		}
 	}
 }
 /*
+C:\Users\HP\Desktop\Learn New Technologies\Learn-New-Technologies\Core-Java\2 Java flow control Statements>javac controlstatement.java
+
 C:\Users\HP\Desktop\Learn New Technologies\Learn-New-Technologies\Core-Java\2 Java flow control Statements>java Test
-Value of a = 20
+durga
+durgasoft
 */

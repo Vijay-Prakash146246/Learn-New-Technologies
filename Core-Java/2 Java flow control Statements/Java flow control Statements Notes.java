@@ -242,3 +242,328 @@ twenty
 ///                                           Iteration Statements
 ///
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+By using iteration statements we are able to execute group of statements repeatedly or more
+number of times.
+1) For
+2) For-each
+3) while
+4) do-while 
+Flow of execution in for loop:-
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		for (int i=0;i<5;i++)
+		{ 
+					System.out.println("Ratan");
+		}
+	}
+}
+/*
+C:\Users\HP\Desktop\Learn New Technologies\Learn-New-Technologies\Core-Java\2 Java flow control Statements>javac controlstatement.java
+
+C:\Users\HP\Desktop\Learn New Technologies\Learn-New-Technologies\Core-Java\2 Java flow control Statements>java Test
+Ratan
+Ratan
+Ratan
+Ratan
+Ratan
+*/
+Case 2: Inside the for loop initialization part is optional but semicolon is mandatory.
+int i=0;
+for (;i<10;i++)
+{ 
+	System.out.println("durga");
+}
+Case 3 : Initialization part it is possible to take n number of System.out.println(“ratna”) statements and each and every statement is separated by comma(,) .
+int i=0;
+for (System.out.println("Aruna"),System.out.println("Ratan");i<10;i++)
+{ 
+	System.out.println("anu");
+}
+Case 4 : Initialization part it is not possible to declare the data type two times whether it is same type or different types. But it is possible to declare the single 
+data type with more than one variable.
+Invalid
+for (int i=0,int j=0 ;i<10;i++)
+{ 
+	System.out.println("ratan");
+}
+Valid
+for (int i=0,j=0;i<10;i++)
+{ 
+	System.out.println("ratan");
+}
+
+//Conditional part :
+Case 1: Inside for loop conditional part is optional, if we are not providing condition at the time
+of compilation compiler will generate true constant.
+for (int i=0;;i++)
+{ 
+	System.out.println("ratan");
+}
+Case 2: error : Unreachable statement
+ If the control unable to enter in particular area is called unreachable statement.
+ We will get the unreachable code when we declare only Boolean constants(true,false).
+ When we will give true condition the remaining code is unreachable when we will give false condition the body is unreachable.
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		for (int i=1;true;i++) 
+		{
+		System.out.println("ratan");
+		}
+		System.out.println("rest of the code");
+	}
+}
+/*
+C:\Users\HP\Desktop\Learn New Technologies\Learn-New-Technologies\Core-Java\2 Java flow control Statements>javac controlstatement.java
+controlstatement.java:9: error: unreachable statement
+                System.out.println("rest of the code");
+                ^
+1 error
+*/
+for (int i=1;false;i++)
+{ 
+	System.out.println("ratan");
+}
+System.out.println("rest of the code");
+
+Case 3 :- Valid
+ When you provide the condition even though that condition is represent infinite loop compiler is unable to find unreachable statements,
+because there may be chance of condition fail.
+ When you provide Boolean constants as a condition then compiler is identifying unreachable statement because compiler knows that condition never change.
+for (int i=1;i>0;i++ )
+{ 
+	System.out.println("durga");
+}
+System.out.println("rest of the app");
+Case 4: method calling return Boolean condition.
+class Test
+{ 
+	static boolean m1()
+	{ 
+		return true;
+	}
+public static void main(String[] args)
+{ 
+	for (i=0 ;Test.m1();i++ )
+	{ 
+		System.out.println("durga");
+	}
+}
+}
+
+//increment/decrement :-
+case 1 : Inside the for loop increment/decrement part is optional.
+for (int i=0;i<10;)
+{ 
+	System.out.println("durga");
+    i++;
+}
+Case 2 : In the increment/decrement it is possible to take the n number of SOP() statements and
+each and every statement is separated by comma(,).
+for (int i=0;i<10;System.out.println("aruna"),System.out.println("sravya"))
+{ 
+	System.out.println("sravya");
+    i++;
+}
+Case 3 : Inside the for loop each and every part is optional but semicolon is mandatory.
+for(;; ) represent infinite loop because the condition is always true.
+Case 4: error : unreachable statement
+for ( ; ; )
+{ 
+	System.out.println("ratan");
+}
+System.out.println("anu"); //error: unreachable statement
+
+For-each loop:-(introduced in 1.5 version)
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		int[] a={10,20};
+		System.out.println(a[0]);
+		System.out.println(a[1]);
+		//printing data by using for-loop
+		for (int i=0;i<a.length;i++)
+		{ 
+			System.out.println(a[i]);
+		}
+		//printing data by using for-each loop
+		for (int aa: a)
+		{ 
+			System.out.println(aa);
+		}
+	}
+}
+/*
+C:\Users\HP\Desktop\Learn New Technologies\Learn-New-Technologies\Core-Java\2 Java flow control Statements>javac controlstatement.java
+
+C:\Users\HP\Desktop\Learn New Technologies\Learn-New-Technologies\Core-Java\2 Java flow control Statements>java Test
+10
+20
+10
+20
+10
+20
+*/
+for loop vs for-each loop :-
+ For loop is used to print the data & it is possible to apply conditions.
+ For-each loop is used to print the data from starting element to ending element it is not possible to apply the conditions.
+//While loop:- 
+while (Boolean-expression) //condition must be Boolean & mandatory.
+{ 
+	body;
+}
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		int i=0;
+		while (i<10)
+		{ 
+			System.out.println("ratan");
+		    i++;
+		}
+	}
+}
+/*
+C:\Users\HP\Desktop\Learn New Technologies\Learn-New-Technologies\Core-Java\2 Java flow control Statements>javac controlstatement.java
+
+C:\Users\HP\Desktop\Learn New Technologies\Learn-New-Technologies\Core-Java\2 Java flow control Statements>java Test
+ratan
+ratan
+ratan
+ratan
+ratan
+ratan
+ratan
+ratan
+ratan
+ratan
+*/
+Case 3: 
+while (true)
+{ 
+	System.out.println("ratan");
+}
+System.out.println("anu"); //error: unreachable statement
+Case 4 : Just to check the data & print the data use while loop.
+while (itr.hasNext())
+{ 
+	System.out.println(itr.next());
+}
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		String[] array = {"Niraj", "Sonu"};
+        ArrayList<String> itr = new ArrayList<>(Arrays.asList(array));
+        Iterator<String> iterator = itr.iterator();
+
+        while (iterator.hasNext()) 
+			{
+                     System.out.println(iterator.next());
+           }
+	}
+}
+/*
+C:\Users\HP\Desktop\Learn New Technologies\Learn-New-Technologies\Core-Java\2 Java flow control Statements>javac controlstatement.java
+
+C:\Users\HP\Desktop\Learn New Technologies\Learn-New-Technologies\Core-Java\2 Java flow control Statements>java Test
+Niraj
+Sonu
+*/
+
+//for loop vs while loop :-
+ To print the data from specific value to specific value with increment value use for loop.
+ Just to check the data & print the data use while loop.
+//Do-While:-
+ If we want to execute the loop body at least one time them we should go for do-while statement.
+ In do-while first body will be executed then only condition will be checked.
+Syntax:- 
+do
+{ 
+	//body of loop
+} while(Boolean-condition);
+Case 1:
+class Test
+public static void main(String[] args)
+{ 
+	int i=0;
+		do
+		{ 
+			System.out.println("ratan");
+		i++;
+		}while (i<10);
+}
+}
+Case 2:- 
+int i=0;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		do
+		{ 
+			System.out.println("durga");
+		}while (false);
+		System.out.println("durgasoft");
+	}
+}
+/*
+C:\Users\HP\Desktop\Learn New Technologies\Learn-New-Technologies\Core-Java\2 Java flow control Statements>javac controlstatement.java
+
+C:\Users\HP\Desktop\Learn New Technologies\Learn-New-Technologies\Core-Java\2 Java flow control Statements>java Test
+durga
+durgasoft
+*/
+//Transfer statements:- (jump statements)
+By using transfer statements we are able to transfer the flow of execution from one position to another position.
+ Break
+ continue
+ return
+ try
+ goto
+//break:- 
+Break is used to stop the execution. And is possible touse the break statement only two areas.
+ Inside the switch statement.
+ Inside the loops.
+Case 1 : break is used to stop the execution come out of loop.
+class Test
+{ 
+public static void main(String[] args)
+{ 
+	for (int i=0;i<10;i++)
+	{ 
+			if (i==5)
+			break;
+			System.out.println(i);
+	}
+}
+}
+Case 2: if we are using break outside switch or loops the compiler will raise compilation error //“break outside switch or loop”
+if (true)
+{ 
+	    System.out.println("ratan");
+		break;
+		System.out.println("nandu");
+}
+
+//Continue: it is used skip the current iteration and it is continue the rest of the iterations normally.
+class Test
+{ 
+	public static void main(String[] args)
+{ 
+		for (int i=0;i<10;i++)
+		{ 
+		if (i==5)
+		continue;
+		System.out.println(i);
+		}
+}
+}
