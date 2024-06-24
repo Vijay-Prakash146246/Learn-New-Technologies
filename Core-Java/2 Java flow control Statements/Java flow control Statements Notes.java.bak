@@ -1,0 +1,122 @@
+//Java flow control Statements
+There are three types of flow control statements in java :-
+a. Selection Statements
+b. Iteration statements
+c. Transfer statements
+*****************************************************
+1. Selection Statements
+a. If
+b. If-else
+c. Switch
+d. else-if 
+
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		int age =20;
+		if(age>21)
+		{
+			System.out.println("If condition is true");
+		}
+		else
+		{
+					System.out.println("If condition is false");
+		}
+	}
+}
+/*C:\Users\HP\Desktop\Learn New Technologies\Learn-New-Technologies\Core-Java\2 Java flow control Statements>java Test
+If condition is false
+*/
+
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		if(true)
+		{
+			System.out.println("Boolean if condition is true");
+		}
+		else
+		{
+					System.out.println("If condition is false");
+		}
+	}
+}
+/*C:\Users\HP\Desktop\Learn New Technologies\Learn-New-Technologies\Core-Java\2 Java flow control Statements>java Test
+Boolean if condition is true
+*/
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		if(0)
+		{
+			System.out.println("0 is consider as false");
+		}
+		else
+		{
+					System.out.println("If condition is false");
+		}
+	}
+}
+/*
+C:\Users\HP\Desktop\Learn New Technologies\Learn-New-Technologies\Core-Java\2 Java flow control Statements>javac controlstatement.java
+controlstatement.java:5: error: incompatible types: int cannot be converted to boolean
+                if(0)
+                   ^
+1 error
+*/
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		if(a=10)
+		{
+			System.out.println("a=10 consider as boolean");
+		}
+		else
+		{
+					System.out.println("If condition is false");
+		}
+	}
+}
+/*
+C:\Users\HP\Desktop\Learn New Technologies\Learn-New-Technologies\Core-Java\2 Java flow control Statements>javac controlstatement.java
+controlstatement.java:5: error: cannot find symbol
+                if(a=10)
+                   ^
+  symbol:   variable a
+  location: class Test
+1 error
+*/
+
+//Note : In java semicolon is empty statement
+//Switch statement:-
+ Switch statement is used to declare multiple options.
+ Switch is taking the argument, the allowed arguments are byte,short,int,char (primitive data types) Byte, Short,Integer,Character(wrapper calsses) enum(1.5 v) String(1.7 v)
+ Inside the switch it is possible to declare more than one case but it is possible to declare only one default.
+ Based on the provided argument the matched case will be executed if the cases are not matched default will be executed.
+ Float,double,long is not allowed as a switch argument because these are having too large values.
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		int a=20 ;
+		switch(a)
+		{
+			case 10:
+				System.out.println("Value of a = "+a);
+			break;
+			case 20:
+				System.out.println("Value of a = "+a);
+			break;
+			default:
+				System.out.println("Value of a = "+a);
+		}
+	}
+}
+/*
+C:\Users\HP\Desktop\Learn New Technologies\Learn-New-Technologies\Core-Java\2 Java flow control Statements>java Test
+Value of a = 20
+*/
