@@ -1,0 +1,28 @@
+class Test
+{ 
+	static { System.out.println("static block-1"); }
+    static { System.out.println("static block-2"); }
+    { 
+		System.out.println("instance block"); 
+	}
+    Test() 
+	{ 
+	    System.out.println("0-arg cons"); 
+	}
+   Test(int a) 
+	{
+	    System.out.println("1-arg cons"); 
+	}
+	public static void main(String[] args)
+	{ 
+	new Test();
+	new Test(10);
+	}
+}
+/*
+C:\Users\HP\Desktop\Learn New Technologies\Learn-New-Technologies\Core-Java\3 Java class concept>javac Test.java
+
+C:\Users\HP\Desktop\Learn New Technologies\Learn-New-Technologies\Core-Java\3 Java class concept>java Test
+static block-1
+static block-2
+*/
