@@ -1,25 +1,27 @@
-class Test
+class Emp
 { 
-	void add(int a,int b)
+	static int eid;
+	static
 	{ 
-		System.out.println(a+b);
+		eid=111;
 	}
-	void mul(int a,int b)
+	static void disp()
 	{ 
-		System.out.println(a+b);
+		System.out.println(eid);
 	}
 	public static void main(String[] args)
 	{ 
-		Test t = new Test();
-		t.add(5,8);
-		t.mul(10,20);
+		Emp.disp();
 	}
 }
 /*
 C:\Users\HP\Desktop\Learn New Technologies\Learn-New-Technologies\Core-Java\3 Java class concept>javac Test.java
 
 C:\Users\HP\Desktop\Learn New Technologies\Learn-New-Technologies\Core-Java\3 Java class concept>java Test
-m3
-m2
-m3
+static block-1
+static block-2
+instance block
+0-arg cons
+instance block
+1-arg cons
 */
