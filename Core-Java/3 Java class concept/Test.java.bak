@@ -1,0 +1,31 @@
+class Test
+{ 
+	void m1()
+	{ 
+		m2(100);
+		System.out.println("m2 ");
+		m2(200);
+	}
+	void m2(int a)
+	{ 
+		System.out.println("m3 ");
+	}
+	public static void main(String[] args)
+	{ 
+		Test t=new Test();
+		t.m1();
+	}
+}
+/*
+C:\Users\HP\Desktop\Learn New Technologies\Learn-New-Technologies\Core-Java\3 Java class concept>javac Test.java
+
+C:\Users\HP\Desktop\Learn New Technologies\Learn-New-Technologies\Core-Java\3 Java class concept>java Test
+Byte value-->10
+short value-->20
+int value-->30
+long value is-->40
+float value is-->10.6
+double value is-->20.5
+character value is-->a
+Boolean value is-->true
+*/
